@@ -9,7 +9,7 @@
 Scene::Scene()
 {
     //Advect
-    if(!programs.Advect.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!programs.Advect.compileShaderFromFile("./shaders/vertex.vs",
                                             GLSLShader::VERTEX))
     {
         printf("Advect::Vertex shader failed to compile!\n%s",
@@ -17,7 +17,7 @@ Scene::Scene()
         std::cout<<std::endl;
         exit(1);
     }
-    if(!programs.Advect.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/advect.fs",
+    if(!programs.Advect.compileShaderFromFile("./shaders/advect.fs",
                                             GLSLShader::FRAGMENT))
     {
         printf("Advect::Fragment shader failed to compile!\n%s",
@@ -31,14 +31,14 @@ Scene::Scene()
         exit(1);
     }
     //Jacobi
-    if(!programs.Jacobi.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!programs.Jacobi.compileShaderFromFile("./shaders/vertex.vs",
                                             GLSLShader::VERTEX))
     {
         printf("Jacobi::Vertex shader failed to compile!\n%s",
                 programs.Jacobi.log().c_str());
         exit(1);
     }
-    if(!programs.Jacobi.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/jacobi.fs",
+    if(!programs.Jacobi.compileShaderFromFile("./shaders/jacobi.fs",
                                             GLSLShader::FRAGMENT))
     {
         printf("Jacobi::Fragment shader failed to compile!\n%s",
@@ -52,14 +52,14 @@ Scene::Scene()
         exit(1);
     }
     //SubtractGradient
-    if(!programs.SubtractGradient.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!programs.SubtractGradient.compileShaderFromFile("./shaders/vertex.vs",
                                                     GLSLShader::VERTEX))
     {
         printf("SubtracGradient::Vertex shader failed to compile!\n%s",
                 programs.SubtractGradient.log().c_str());
         exit(1);
     }
-    if(!programs.SubtractGradient.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/subtractGradient.fs",
+    if(!programs.SubtractGradient.compileShaderFromFile("./shaders/subtractGradient.fs",
                                                     GLSLShader::FRAGMENT))
     {
         printf("SubtractGradient::Fragment shader failed to compile!\n%s",
@@ -73,14 +73,14 @@ Scene::Scene()
         exit(1);
     }
     //ComputeDivergence
-    if(!programs.ComputeDivergence.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!programs.ComputeDivergence.compileShaderFromFile("./shaders/vertex.vs",
                                                     GLSLShader::VERTEX))
     {
         printf("ComputeDivergence::Vertex shader failed to compile!\n%s",
                 programs.ComputeDivergence.log().c_str());
         exit(1);
     }
-    if(!programs.ComputeDivergence.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/divergence.fs",
+    if(!programs.ComputeDivergence.compileShaderFromFile("./shaders/divergence.fs",
                                                     GLSLShader::FRAGMENT))
     {
         printf("ComputeDivergence::Fragment shader failed to compile!\n%s",
@@ -94,14 +94,14 @@ Scene::Scene()
         exit(1);
     }
     //ApplyImpulse
-    if(!programs.ApplyImpulse.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!programs.ApplyImpulse.compileShaderFromFile("./shaders/vertex.vs",
                                                 GLSLShader::VERTEX))
     {
         printf("ApplyImpulse::Vertex shader failed to compile!\n%s",
                 programs.ApplyImpulse.log().c_str());
         exit(1);
     }
-    if(!programs.ApplyImpulse.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/splat.fs",
+    if(!programs.ApplyImpulse.compileShaderFromFile("./shaders/splat.fs",
                                                 GLSLShader::FRAGMENT))
     {
         printf("ApplyImpulse::Fragment shader failed to compile!\n%s",
@@ -115,14 +115,14 @@ Scene::Scene()
         exit(1);
     }
     //ApplyBuoyancy
-    if(!programs.ApplyBuoyancy.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!programs.ApplyBuoyancy.compileShaderFromFile("./shaders/vertex.vs",
                                                 GLSLShader::VERTEX))
     {
         printf("ApplyBuoyancy::Vertex shader failed to compile!\n%s",
                 programs.ApplyBuoyancy.log().c_str());
         exit(1);
     }
-    if(!programs.ApplyBuoyancy.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/buoyancy.fs",
+    if(!programs.ApplyBuoyancy.compileShaderFromFile("./shaders/buoyancy.fs",
                                                 GLSLShader::FRAGMENT))
     {
         printf("ApplyBuoyancy::Fragment shader failed to compile!\n%s",
@@ -136,14 +136,14 @@ Scene::Scene()
         exit(1);
     }
     //VisualizationTest
-    if(!programs.VisualizationTest.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!programs.VisualizationTest.compileShaderFromFile("./shaders/vertex.vs",
                                                     GLSLShader::VERTEX))
     {
         printf("VisualizationTest::Vertex shader failed to compile!\n%s",
                 programs.VisualizationTest.log().c_str());
         exit(1);
     }
-    if(!programs.VisualizationTest.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/visualize.fs",
+    if(!programs.VisualizationTest.compileShaderFromFile("./shaders/visualize.fs",
                                                     GLSLShader::FRAGMENT))
     {
         printf("VisualizationTest::Fragment shader failed to compile!\n%s",
@@ -330,14 +330,14 @@ void Scene::createObstacles(Surface dest, int width, int height)
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
     GLSLProgram obstaclesProgram;
-    if(!obstaclesProgram.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/vertex.vs",
+    if(!obstaclesProgram.compileShaderFromFile("./shaders/vertex.vs",
                                             GLSLShader::VERTEX))
     {
         printf("CreateObstacles::Vertex shader failed to compile!\n%s",
                 obstaclesProgram.log().c_str());
         exit(1);
     }
-    if(!obstaclesProgram.compileShaderFromFile("/Users/yuqingguan/Documents/cppcode/gas2d/gas2d/shaders/fill.fs",
+    if(!obstaclesProgram.compileShaderFromFile("./shaders/fill.fs",
                                             GLSLShader::FRAGMENT))
     {
         printf("CreateObstalces::Fragment shader failed to compile\n%s",
