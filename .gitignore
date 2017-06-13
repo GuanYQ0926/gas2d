@@ -3,3 +3,5 @@
 .gdbinit
 gas2d
 *.o
+.idea/
+cmake-build-debug/
